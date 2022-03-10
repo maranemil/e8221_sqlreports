@@ -1,4 +1,4 @@
-<?PHP
+<?PHP /** @noinspection PhpIncludeInspection */
 /*********************************************************************************
  * By installing or using this file, you are confirming on behalf of the entity
  * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
@@ -15,12 +15,13 @@
  */
 require_once('modules/e8221_SQLReports/e8221_SQLReports_sugar.php');
 
-class e8221_SQLReports extends e8221_SQLReports_sugar {
+class e8221_SQLReports extends e8221_SQLReports_sugar
+{
 
-   function e8221_SQLReports() {
-	  parent::e8221_SQLReports_sugar();
-   }
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 }
 
-?>

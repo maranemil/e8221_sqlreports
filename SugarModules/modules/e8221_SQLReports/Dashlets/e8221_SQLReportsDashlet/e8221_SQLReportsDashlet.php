@@ -1,5 +1,13 @@
-<?php
-if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+<?php /** @noinspection PhpPropertyOnlyWrittenInspection */
+/** @noinspection UnusedConstructorDependenciesInspection */
+/** @noinspection PhpUnusedLocalVariableInspection */
+/** @noinspection PhpIncludeInspection */
+/** @noinspection PhpUndefinedFunctionInspection */
+/** @noinspection PhpUndefinedClassInspection */
+/** @noinspection PhpUndefinedVariableInspection */
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * By installing or using this file, you are confirming on behalf of the entity
  * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
@@ -20,19 +28,39 @@ if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 require_once('include/Dashlets/DashletGeneric.php');
 require_once('modules/e8221_SQLReports/e8221_SQLReports.php');
+require_once('modules/e8221_SQLReports/metadata/dashletviewdefs.php');
 
-class e8221_SQLReportsDashlet extends DashletGeneric {
-   function e8221_SQLReportsDashlet($id, $def = null) {
-	  global $current_user, $app_strings;
-	  require('modules/e8221_SQLReports/metadata/dashletviewdefs.php');
+class e8221_SQLReportsDashlet extends DashletGeneric
+{
+    /**
+     * @var mixed
+     */
+    private $title;
+    /**
+     * @var mixed
+     */
+    private $searchFields;
+    /**
+     * @var mixed
+     */
+    private $columns;
+    /**
+     * @var e8221_SQLReports
+     */
+    private $seedBean;
 
-	  parent::DashletGeneric($id, $def);
+    public function __construct($id, $def = null)
+    {
+        global $current_user, $app_strings;
+        parent::DashletGeneric($id, $def);
 
-	  if (empty($def['title'])) $this->title = translate('LBL_HOMEPAGE_TITLE', 'e8221_SQLReports');
+        if (empty($def['title'])) {
+            $this->title = translate('LBL_HOMEPAGE_TITLE', 'e8221_SQLReports');
+        }
 
-	  $this->searchFields = $dashletData['e8221_SQLReportsDashlet']['searchFields'];
-	  $this->columns      = $dashletData['e8221_SQLReportsDashlet']['columns'];
+        $this->searchFields = $dashletData['e8221_SQLReportsDashlet']['searchFields'];
+        $this->columns = $dashletData['e8221_SQLReportsDashlet']['columns'];
 
-	  $this->seedBean = new e8221_SQLReports();
-   }
+        $this->seedBean = new e8221_SQLReports();
+    }
 }

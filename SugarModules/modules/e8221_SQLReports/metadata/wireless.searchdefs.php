@@ -10,19 +10,19 @@
  * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
  ********************************************************************************/
 
-$module_name              = 'e8221_SQLReports';
+$module_name = 'e8221_SQLReports';
 $searchdefs[$module_name] = array(
-	'templateMeta' => array(
-		'maxColumns' => '1',
-		'widths'     => array('label' => '10', 'field' => '30'),
-	),
-	'layout'       => array(
-		'basic_search'    => array(
-			'name',
-		),
-		'advanced_search' => array(
-			'name',
-		),
-	),
+    'templateMeta' => array(
+        'maxColumns' => '1',
+        'widths'     => array('label' => '10', 'field' => '30'),
+    ),
+    'layout'       => array(
+        'basic_search'    => array(
+            'name',
+        ),
+        'advanced_search' => array(
+            'name',
+        ),
+    ),
 );
-?>
+

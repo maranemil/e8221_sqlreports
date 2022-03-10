@@ -1,5 +1,7 @@
-<?php
-if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+<?php /** @noinspection PhpUndefinedFunctionInspection */
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
 /*********************************************************************************
  * By installing or using this file, you are confirming on behalf of the entity
  * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
@@ -20,8 +22,9 @@ if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 global $app_strings;
 
-$dashletMeta['e8221_SQLReportsDashlet'] = array('module'      => 'e8221_SQLReports',
-												'title'       => translate('LBL_HOMEPAGE_TITLE', 'e8221_SQLReports'),
-												'description' => 'A customizable view into e8221_SQLReports',
-												'icon'        => 'icon_e8221_SQLReports_32.gif',
-												'category'    => 'Module Views');
+$dashletMeta['e8221_SQLReportsDashlet'] = array(
+    'module'      => 'e8221_SQLReports',
+    'title'       => translate('LBL_HOMEPAGE_TITLE', 'e8221_SQLReports'),
+    'description' => 'A customizable view into e8221_SQLReports',
+    'icon'        => 'icon_e8221_SQLReports_32.gif',
+    'category'    => 'Module Views');

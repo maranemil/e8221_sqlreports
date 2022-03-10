@@ -10,7 +10,7 @@
  * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
  ********************************************************************************/
 
-$app_list_strings['moduleList']['e8221_SQLReports']                = 'SQLReports';
-$app_list_strings['sqlquery_graph_type_list']['']                  = '';
+$app_list_strings['moduleList']['e8221_SQLReports'] = 'SQLReports';
+$app_list_strings['sqlquery_graph_type_list'][''] = '';
 $app_list_strings['sqlquery_graph_type_list']['grouped_bar_chart'] = 'Grouped Bar Chart';
-$app_list_strings['sqlquery_graph_type_list']['staked']            = 'Staked';
+$app_list_strings['sqlquery_graph_type_list']['staked'] = 'Staked';

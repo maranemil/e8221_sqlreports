@@ -10,26 +10,25 @@
  * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
  ********************************************************************************/
 
-$module_name                        = 'e8221_SQLReports';
+$module_name = 'e8221_SQLReports';
 $viewdefs[$module_name]['EditView'] = array(
-	'templateMeta' => array('maxColumns' => '1',
-							'widths'     => array(
-								array('label' => '10', 'field' => '30'),
-								array('label' => '10', 'field' => '30')
-							),
-	),
+    'templateMeta' => array('maxColumns' => '1',
+                            'widths'     => array(
+                                array('label' => '10', 'field' => '30'),
+                                array('label' => '10', 'field' => '30')
+                            ),
+    ),
 
-	'panels' => array(
-		array(
-			'name',
-		),
-		array(
-			'assigned_user_name',
-		),
-		array(
-			'team_name',
-		),
-	)
+    'panels' => array(
+        array(
+            'name',
+        ),
+        array(
+            'assigned_user_name',
+        ),
+        array(
+            'team_name',
+        ),
+    )
 
 );
-?>

@@ -10,30 +10,29 @@
  * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
  ********************************************************************************/
 
-$module_name                           = 'e8221_SQLReports';
+$module_name = 'e8221_SQLReports';
 $viewdefs[$module_name]['QuickCreate'] = array(
-	'templateMeta' => array('maxColumns' => '2',
-							'widths'     => array(
-								array('label' => '10', 'field' => '30'),
-								array('label' => '10', 'field' => '30')
-							),
-	),
+    'templateMeta' => array('maxColumns' => '2',
+                            'widths'     => array(
+                                array('label' => '10', 'field' => '30'),
+                                array('label' => '10', 'field' => '30')
+                            ),
+    ),
 
-	'panels' => array(
-		'default' =>
-			array(
+    'panels' => array(
+        'default' =>
+            array(
 
-				array(
-					'name',
-					'assigned_user_name',
-				),
-				array(
-					'description',
-					array('name' => 'team_name', 'displayParams' => array('display' => true)),
-				),
-			),
+                array(
+                    'name',
+                    'assigned_user_name',
+                ),
+                array(
+                    'description',
+                    array('name' => 'team_name', 'displayParams' => array('display' => true)),
+                ),
+            ),
 
-	),
+    ),
 
 );
-?>
